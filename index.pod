@@ -1,0 +1,21 @@
+=head1 Self Wiki
+
+=head2 数据存储
+
+当前的工作
+
+=head2 Perl
+
+便利的脚本语言
+
+=head2 Emacs
+
+方便实用的文本编辑工具
+
+=head2 Debian
+
+用起来相当顺手的操作系统
+
+=head2 Common Lisp
+
+换种方式来思考

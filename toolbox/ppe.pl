@@ -1,7 +1,7 @@
-#! /usr/bin/perl -w
+#!/usr/bin/perl -w
 
 # @todo
-# article, title, section, heading, pargraph
+# article, title, sections, heading, paragraphs
 
 # use strict;
 use Pod::Parser;
@@ -10,10 +10,30 @@ package PPE;
 @ISA = qw(Pod::Parser);
 
 my %article;
-my $title;
-my %section;
-my $head;
-my $content;
+
+sub article_grow {
+  my ($type, $content) = @_;
+
+  if ($type eq "title") {
+    $article{"title"} = $content;
+  } elsif ($type eq "heading") {
+    my $sections = $article{"sections"};
+    my $new_no = 0;
+    if (defined $sections) {
+      $new_no = @$sections;
+    }
+    $article{"sections"}->[$new_no]->{"heading"} = $content;
+  } elsif ($type eq "paragraph") {
+    my $sections = $article{"sections"};
+    my $last_no = @$sections-1;
+    my $paragraphs = $sections->[$last_no]->{"paragraphs"};
+    if (defined $paragraphs) {
+      push @$paragraphs, $content;
+    } else {
+      $article{"sections"}->[$last_no]->{"paragraphs"}->[0] = $content;
+    }
+  }
+}
 
 sub command {
     my ($parser, $command, $paragraph, $line_num) = @_;
@@ -22,11 +42,9 @@ sub command {
 
     ## Interpret the command and its text; sample actions might be:
     if ($command eq 'head1') {
-      $title = $expansion;
-      $article{'title'} = $expansion;
+      article_grow("title", $expansion);
     } elsif ($command eq 'head2') {
-      $head = $expansion;
-      chomp $head;
+      article_grow("heading", $expansion);
     }
     ## ... other commands and their actions
 }
@@ -44,11 +62,7 @@ sub textblock {
 
     my $expansion = $parser->interpolate($paragraph, $line_num);
 
-    $content = $paragraph;
-
-    chomp $content;
-
-    print $head." => ".$content."\n";
+    article_grow("paragraph", $expansion);
 }
 
 sub interior_sequence {
@@ -66,3 +80,5 @@ $parser = new PPE();
 for (@ARGV) {
   $parser->parse_from_file($_);
 }
+
+print @{$article{"sections"}->[4]->{"paragraphs"}};

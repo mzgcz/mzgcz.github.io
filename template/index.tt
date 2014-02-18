@@ -11,7 +11,9 @@
     [% FOREACH section IN sections %]
     <h2>[% section.heading %]</h2>
     [% FOREACH paragraph IN section.paragraphs %]
-    <p>[% paragraph %]</p>
+    <p>
+      [% paragraph %]
+    </p>
     [% END %]
     [% END %]
   </body>

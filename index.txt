@@ -1,8 +1,0 @@
-title:  维博生活
-category_begin:
-        存储    当前的工作      存储.html
-        perl    好用的脚本语言  perl.html
-        emacs   传说中神的编辑器      emacs.html
-        debian  顺手的操作系统        debian.html
-        CommonLisp    换种方法来思考        commonlisp.html
-category_end

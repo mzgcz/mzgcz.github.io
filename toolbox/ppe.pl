@@ -16,7 +16,8 @@ my %article;
 sub article_grow {
   my ($type, $content) = @_;
 
-  $content =~ s/(.*)[\d\D]*/$1/;
+  chomp $content;
+  chomp $content;
 
   if ($type eq "title") {
     $article{"title"} = $content;
@@ -57,7 +58,7 @@ sub verbatim {
     my ($parser, $paragraph, $line_num) = @_;
     ## Format verbatim paragraph; sample actions might be:
     my $out_fh = $parser->output_handle();
-    print $out_fh $paragraph;
+    # print $out_fh $paragraph;
 }
 
 sub textblock {
@@ -80,7 +81,6 @@ sub interior_sequence {
         return qq(<a href="$2">$1</a>);
       }
     }
-    return "$seq_argument"  if ($seq_command eq 'L');
     ## ... other sequence commands and their resulting text
 }
 
@@ -93,7 +93,7 @@ $parser->parse_from_file($pod_file);
 
 # 生成目标网页
 my $tt = Template->new({
-                        INCLUDE_PATH => "/home/mzgcz/self-src/mzgcz.github.io/template/",
+                        INCLUDE_PATH => "/home/mzgcz/game_room/mzgcz.github.io/template/",
                         INTERPOLATE  => 1,
                        }) || die "$Template::ERROR\n";
 

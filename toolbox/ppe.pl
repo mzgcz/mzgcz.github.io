@@ -1,18 +1,22 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl
 
 # @todo
 # article, title, sections, heading, paragraphs
 
-# use strict;
+use strict;
+use warnings;
+use Template;
 use Pod::Parser;
 
 package PPE;
-@ISA = qw(Pod::Parser);
+our @ISA = qw(Pod::Parser);
 
 my %article;
 
 sub article_grow {
   my ($type, $content) = @_;
+
+  $content =~ s/(.*)[\d\D]*/$1/;
 
   if ($type eq "title") {
     $article{"title"} = $content;
@@ -71,14 +75,26 @@ sub interior_sequence {
     return "*$seq_argument*"     if ($seq_command eq 'B');
     return "`$seq_argument'"     if ($seq_command eq 'C');
     return "_${seq_argument}_'"  if ($seq_command eq 'I');
+    if ($seq_command eq 'L') {
+      if ($seq_argument =~ /(.+?)\|(.+)/) {
+        return qq(<a href="$2">$1</a>);
+      }
+    }
+    return "$seq_argument"  if ($seq_command eq 'L');
     ## ... other sequence commands and their resulting text
 }
 
 package main;
 
-$parser = new PPE();
-for (@ARGV) {
-  $parser->parse_from_file($_);
-}
+my ($pod_file, $tt_file, $html_file) = @ARGV;
 
-print @{$article{"sections"}->[4]->{"paragraphs"}};
+my $parser = new PPE();
+$parser->parse_from_file($pod_file);
+
+# 生成目标网页
+my $tt = Template->new({
+                        INCLUDE_PATH => "/home/mzgcz/self-src/mzgcz.github.io/template/",
+                        INTERPOLATE  => 1,
+                       }) || die "$Template::ERROR\n";
+
+$tt->process($tt_file, \%article, $html_file) || die $tt->error();

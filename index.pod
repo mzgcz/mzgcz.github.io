@@ -1,21 +1,21 @@
 =head1 Self Wiki
 
-=head2 数据存储
+=head2 L<存储|storage/storage.html>
 
-当前的工作
+这是我当前的工作，汗
 
-=head2 Perl
+=head2 L<Perl语言|perl/perl.html>
 
-便利的脚本语言
+做事麻利的胶水语言
 
-=head2 Emacs
+=head2 L<Emacs编辑器|emacs/emacs.html>
 
-方便实用的文本编辑工具
+一本万利的文本操作方式
 
-=head2 Debian
+=head2 L<Debian操作系统|debian/debian.html>
 
-用起来相当顺手的操作系统
+他说自己不仅仅是个操作系统，而是自由的愿景
 
-=head2 Common Lisp
+=head2 L<Common Lisp语言|lisp/lisp.html>
 
-换种方式来思考
+他没有数据结构，这就是他的精髓

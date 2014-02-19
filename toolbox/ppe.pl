@@ -93,7 +93,7 @@ $parser->parse_from_file($pod_file);
 
 # 生成目标网页
 my $tt = Template->new({
-                        INCLUDE_PATH => "/home/mzgcz/game_room/mzgcz.github.io/template/",
+                        INCLUDE_PATH => "/home/mzgcz/self-src/mzgcz.github.io/template/",
                         INTERPOLATE  => 1,
                        }) || die "$Template::ERROR\n";
 

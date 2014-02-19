@@ -7,7 +7,7 @@
     <title>[% title %]</title>
   </head>
   <body>
-    <h1>[% title %]</h1>
+    <h1 class="title">[% title %]</h1>
     [% FOREACH section IN sections %]
     <h2>[% section.heading %]</h2>
     [% FOREACH paragraph IN section.paragraphs %]

@@ -3,21 +3,32 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../css/typo.css" />
+    <link rel="stylesheet" href="../css/simple.css" type="text/css" media="all" />
     <link rel="shortcut icon" href="http://wiki.self-app.net/images/self.png" type="image/png" />
     <title>[% title %]</title>
   </head>
-  <body>
-    <h1>[% title %]</h1>
-    [% FOREACH section IN sections %]
-    <h2>[% section.heading %]</h2>
-    [% FOREACH paragraph IN section.paragraphs %]
-    <p>
-        [% paragraph %]
-    </p>
-    [% END %]
-    [% END %]
+  <body class="container">
+    <div class="typo typo-selection">
+      <div class="title">
+        <h1>[% title %]</h1>
+      </div>
+      [% FOREACH section IN sections %]
+      <div class="section">
+        <div class="heading">
+          <h2>[% section.heading %]</h2>
+        </div>
+        [% FOREACH paragraph IN section.paragraphs %]
+        <div class="paragraph">
+          <p>
+            [% paragraph %]
+          </p>
+        </div>
+        [% END %]
+      </div>
+      [% END %]
 
-    <hr />
+      <hr />
+    </div>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">

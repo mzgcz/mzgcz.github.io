@@ -1,21 +1,21 @@
 =head1 Self Wiki
 
-=head2 L<存储|storage/index.html>
+=head2 L<存储|../storage/index.html>
 
 这是我当前的工作，-_-b
 
-=head2 L<Perl语言|perl/index.html>
+=head2 L<Perl语言|../perl/index.html>
 
 做事麻利的胶水语言
 
-=head2 L<Emacs编辑器|emacs/index.html>
+=head2 L<Emacs编辑器|../emacs/index.html>
 
 一本万利的文本操作方式
 
-=head2 L<Debian操作系统|debian/index.html>
+=head2 L<Debian操作系统|../debian/index.html>
 
 他说自己不仅仅是个操作系统，而是自由的愿景
 
-=head2 L<Common Lisp语言|lisp/index.html>
+=head2 L<Common Lisp语言|../lisp/index.html>
 
 他没有数据结构，这就是他的精髓

@@ -10,7 +10,16 @@
   <body class="container">
     <div class="typo typo-selection">
       <div class="title">
-        <h1>[% title %]</h1>
+        <h1>
+          <nav>
+            <a href="../index/index.html">Self Wiki</a>
+            [% IF (title == 'Self Wiki')  %]
+            <a href="./index.html">首页</a>
+            [% ELSE %]
+            <a href="./index.html">[% title %]</a>
+            [% END %]
+          </nav>
+        </h1>
       </div>
       [% FOREACH section IN sections %]
       <div class="section">

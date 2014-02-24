@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../css/typo.css" />
     <link rel="stylesheet" href="../css/simple.css" type="text/css" media="all" />
     <link rel="shortcut icon" href="../images/self.png" type="image/png" />
-    <title>[% title %]</title>
+    <title>游戏攻略</title>
   </head>
   <body class="container">
     <div class="typo typo-selection">
@@ -13,37 +13,33 @@
         <h1>
           <nav>
             <a href="../index/index.html">Self Wiki</a>
-            [% IF (title == 'Self Wiki')  %]
-            <a href="./index.html">首页</a>
-            [% ELSE %]
-            <a href="./index.html">[% title %]</a>
-            [% END %]
+            
+            <a href="./index.html">游戏攻略</a>
+            
           </nav>
         </h1>
       </div>
-      [% FOREACH section IN sections %]
+      
       <div class="section">
         <div class="heading">
-          <h2>[% section.heading %]</h2>
+          <h2>炉石传说</h2>
         </div>
-        [% IF section.entrys %]
+        
         <div class="entrys">
           <ol>
-            [% FOREACH entry IN section.entrys %]
-            <li>[% entry %]</li>
-            [% END %]
+            
+            <li>专注于单个角色（法师）</li>
+            
+            <li>初期参考别人已经成熟的攻略</li>
+            
+            <li>把握比赛的节奏（按前期，中期，后期），进行出牌</li>
+            
           </ol>
         </div>
-        [% END %]
-        [% FOREACH paragraph IN section.paragraphs %]
-        <div class="paragraph">
-          <p>
-            [% paragraph %]
-          </p>
-        </div>
-        [% END %]
+        
+        
       </div>
-      [% END %]
+      
     </div>
 
     <div id="disqus_thread"></div>

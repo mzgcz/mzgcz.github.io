@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # @todo
-# article, title, sections, heading, paragraphs
+# article, title, sections, heading, paragraphs, list
 
 use strict;
 use warnings;
@@ -37,12 +37,21 @@ sub article_grow {
     } else {
       $article{"sections"}->[$last_no]->{"paragraphs"}->[0] = $content;
     }
+  } elsif ($type eq "entry") {
+    my $sections = $article{"sections"};
+    my $last_no = @$sections-1;
+    my $list = $sections->[$last_no]->{"entrys"};
+    if (defined $list) {
+      push @$list, $content;
+    } else {
+      $article{"sections"}->[$last_no]->{"entrys"}->[0] = $content;
+    }
   }
 }
 
 sub command {
     my ($parser, $command, $paragraph, $line_num) = @_;
-
+    # print $paragraph."--".$command."--> 1\n";
     my $expansion = $parser->interpolate($paragraph, $line_num);
 
     ## Interpret the command and its text; sample actions might be:
@@ -50,12 +59,15 @@ sub command {
       article_grow("title", $expansion);
     } elsif ($command eq 'head2') {
       article_grow("heading", $expansion);
+    } elsif ($command eq 'item') {
+      article_grow("entry", $expansion);
     }
     ## ... other commands and their actions
 }
 
 sub verbatim {
     my ($parser, $paragraph, $line_num) = @_;
+    # print $paragraph."--> 2\n";
     ## Format verbatim paragraph; sample actions might be:
     my $out_fh = $parser->output_handle();
     # print $out_fh $paragraph;
@@ -63,6 +75,7 @@ sub verbatim {
 
 sub textblock {
     my ($parser, $paragraph, $line_num) = @_;
+    # print $paragraph."--> 3\n";
     ## Translate/Format this block of text; sample actions might be:
 
     my $expansion = $parser->interpolate($paragraph, $line_num);

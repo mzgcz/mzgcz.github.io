@@ -1,0 +1,7 @@
+=head1 Debian
+
+=head2 tmpwatch
+
+Linux使用tmpwatch命令和cron守护进程来定期清理临时目录。
+
+当有文件消失不见而原因未知时，可能是由它引起的。

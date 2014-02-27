@@ -12,16 +12,21 @@
       <div class="title">
         <h1>
           <nav>
-            <a href="../index/index.html">Self Wiki</a>
-            [% IF (title == 'Self Wiki')  %]
-            <a href="./index.html">首页</a>
-            [% ELSE %]
-            <a href="./index.html">[% title %]</a>
-            [% END %]
+            <div class="home">
+              <a href="../index/index.html">Self Wiki</a>
+            </div>
+            <div class="index">
+              [% IF (title == 'Self Wiki')  %]
+              <a href="./index.html">首页</a>
+              [% ELSE %]
+              <a href="./index.html">[% title %]</a>
+              [% END %]
+            </div>
           </nav>
         </h1>
       </div>
       [% FOREACH section IN sections %]
+      <hr />
       <div class="section">
         <div class="heading">
           <h2>[% section.heading %]</h2>

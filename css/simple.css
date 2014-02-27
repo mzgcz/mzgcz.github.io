@@ -6,6 +6,32 @@
     text-align: center;
 }
 
+.home {
+    width: 50%;
+    float: left;
+    text-align: right;
+    background-color: #EEEEEE;
+}
+
+.index {
+    width: 50%;
+    float: right;
+    text-align: left;
+    background-color: #DDDDDD;
+}
+
+a {
+    color: #000000;
+}
+
+body h1 {
+    font: 38px/1.8em Hiragino Mincho ProN, STSong, serif!important;
+}
+
+html {
+    font-size: 110%;
+}
+
 /* .section { */
 /*     margin: 10px 0 10px 0 */
 /* } */

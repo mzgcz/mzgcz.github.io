@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # @todo
-# article, title, sections, heading, paragraphs, list
+# article, title, sections, heading, caption, paragraphs, list
 
 use strict;
 use warnings;
@@ -28,6 +28,11 @@ sub article_grow {
       $new_no = @$sections;
     }
     $article{"sections"}->[$new_no]->{"heading"} = $content;
+    if ($content =~ /">(.*?)<\/a>/) {
+      $article{"sections"}->[$new_no]->{"caption"} = $1;
+    } else {
+      $article{"sections"}->[$new_no]->{"caption"} = $content;
+    }
   } elsif ($type eq "paragraph") {
     my $sections = $article{"sections"};
     my $last_no = @$sections-1;

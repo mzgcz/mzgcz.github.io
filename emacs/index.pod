@@ -1,0 +1,32 @@
+=head1 Emacs
+
+=head2 网页浏览（w3m）
+
+使用w3m浏览文字型网站
+
+=begin html
+
+<table>
+  <caption>w3m使用指南</caption>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>意图</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>安装</td>
+      <td>sudo aptitude install w3m-el</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>帮助</td>
+      <td>？</td>
+    </tr>
+  </tbody>
+</table>
+
+=end html

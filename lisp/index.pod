@@ -1,0 +1,5 @@
+=head1 Common Lisp
+
+=head2 socket通信
+
+通常使用字符型socket较为方便；当需要使用字节型socket时，可以使用pack和basic-binary-ipc来达到快速开发的效果

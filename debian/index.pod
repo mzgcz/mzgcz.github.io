@@ -17,3 +17,49 @@ export http_proxy=http://127.0.0.1:8087
 =head2 发送信号量
 
 kill用于向进程发送信号量；若信号量为0,则不发送任何信号量，用于检查进程是否存在。
+
+=head2 性能监控工具
+
+=over
+
+=item 用户活动： psacct, acct
+
+=item 进程监控：top, htop, monit
+
+=item 进程带宽：nethogs
+
+=item 网络带宽：iftop
+
+=item 网络包：tcpdump
+
+=item 网络状态：netstat
+
+=item 以太网活动：arpwatch
+
+=item 网络安全：suricata
+
+=item 网络流量：vnstat
+
+=item 局域网IP：iptraf
+
+=item 打开的文件：lsof
+
+=item 磁盘I/O：iotop
+
+=item 输入/输出：iostat
+
+=item 虚拟内存：vmstat
+
+=item 网络/服务器：monitorix, nagios
+
+=back
+
+=head2 开发工具
+
+=over
+
+=item C语言：NetBeans
+
+=item 网页：Brackets
+
+=back

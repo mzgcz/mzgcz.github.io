@@ -1,6 +1,5 @@
 #!/usr/bin/env perl
 
-# @todo
 # article, title, sections, heading, caption, paragraphs, list
 
 use strict;

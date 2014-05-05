@@ -5,20 +5,20 @@
     <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../css/typo.css" />
     <link rel="stylesheet" href="../css/simple.css" type="text/css" media="all" />
     <link rel="shortcut icon" href="../images/self.png" type="image/png" />
-    <title>[% title %]</title>
+    <title>[% article.0.title %]</title>
   </head>
   <body class="container">
     <div class="typo typo-selection">
       <div class="title">
-        <h1>[% title %]</h1>
+        <h1>[% article.0.title %]</h1>
       </div>
       <ol start="0">
         <li><a href="../index/index.html">首页</a></li>
-        <li><a href="./index.html">[% title %]</a>
+        <li><a href="./index.html">[% article.0.title %]</a>
           [% section_no = 1 %]
-          [% FOREACH section IN sections %]
+          [% FOREACH section IN article.slice(1,-1) %]
           <ul>
-            <li><a href="#section[% section_no %]">[% section.caption %]</a></li>
+            <li><a href="#section[% section_no %]">[% section.section.0.caption %]</a></li>
           </ul>
           [% section_no = section_no+1 %]
           [% END %]
@@ -26,26 +26,53 @@
       </ol>
       <br />
       [% section_no = 1 %]
-      [% FOREACH section IN sections %]
+      [% FOREACH section IN article.slice(1,-1) %]
       <div class="section">
         <div class="heading">
-          <h2 id="section[% section_no %]">[% section.heading %]</h2>
+          <h2 id="section[% section_no %]">[% section.section.0.heading %]</h2>
         </div>
-        [% IF section.entrys %]
+        [% FOREACH part IN section.section.slice(1,-1) %]
+        [% IF part.paragraph %]
+        <div class="paragraph">
+          <p>
+            [% part.paragraph %]
+          </p>
+        </div>
+        [% ELSIF part.list %]
         <div class="entrys">
           <ol>
-            [% FOREACH entry IN section.entrys %]
-            <li>[% entry %]</li>
+            [% FOREACH item IN part.list %]
+            <li>[% item.item.0.entry %]</li>
+            [% FOREACH item_part IN item.item.slice(1,-1) %]
+            [% IF item_part.paragraph %]
+            <div class="paragraph">
+              <p>
+                [% item_part.paragraph %]
+              </p>
+            </div>
+            [% ELSIF item_part.list %]
+            <div class="entrys">
+              <ol>
+                [% FOREACH item_item IN item_part.list %]
+                <li>[% item_item.item.0.entry %]</li>
+                [% FOREACH item_item_part IN item_item.item.slice(1,-1) %]
+                [% IF item_item_part.paragraph %]
+                <div class="paragraph">
+                  <p>
+                    [% item_item_part.paragraph %]
+                  </p>
+                </div>
+                [% END %]
+                [% END %]
+                [% END %]
+              </ol>
+            </div>
+            [% END %]
+            [% END %]
             [% END %]
           </ol>
         </div>
         [% END %]
-        [% FOREACH paragraph IN section.paragraphs %]
-        <div class="paragraph">
-          <p>
-            [% paragraph %]
-          </p>
-        </div>
         [% END %]
       </div>
       <br />

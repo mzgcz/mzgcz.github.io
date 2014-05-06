@@ -115,6 +115,7 @@ sub textblock {
   article_grow('paragraph', $expansion);
 }
 
+# 主程序
 package main;
 
 sub get_html_name {

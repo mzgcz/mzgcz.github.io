@@ -129,14 +129,14 @@ sub get_html_name {
 }
 
 my $pod_file = $ARGV[0] || die "No Pod File Error!\n";
-my $tt_file = $ARGV[1] || "common.tt";
-my $html_file = $ARGV[2] || get_html_name($pod_file);
+my $home_dir = $ARGV[1] || "../";
+my $tt_file = $ARGV[2] || "common.tt";
+my $html_file = $ARGV[3] || get_html_name($pod_file);
 
 my $parser = new PPE();
 $parser->parse_from_file($pod_file);
 
 # 生成网页
-my $home_dir = "/home/mzgcz/game_room/mzgcz.github.io/";
 my $tt_path = $home_dir."template/";
 my $tt = Template->new({
                         INCLUDE_PATH => $tt_path,

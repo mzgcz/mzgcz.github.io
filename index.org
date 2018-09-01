@@ -1,1 +1,15 @@
-* Hello World
+#+TITLE:       首页
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-01 周六
+#+URI:         /
+#+KEYWORDS:    Lisp, Emacs, Linux, C++, Programming, Blog, 博客, 编程, 生活
+#+LANGUAGE:    zh
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+DESCRIPTION: mzgcz的个人站点
+
+
+青青子衿，悠悠我心。\\
+但为君故，沉吟至今。\\
+呦呦鹿鸣，食野之苹。\\
+我有嘉宾，鼓瑟吹笙。\\

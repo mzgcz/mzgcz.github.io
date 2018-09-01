@@ -3,7 +3,7 @@
 #+EMAIL:       j.wenjiao@gmail.com
 #+DATE:        2018-09-01 周六
 #+URI:         /blog/%y/%m/%d/another_flag/
-#+KEYWORDS:    Life
+#+KEYWORDS:    life
 #+TAGS:        Life
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t

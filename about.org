@@ -1,0 +1,17 @@
+#+TITLE:       关于
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-01 周六
+#+URI:         /about/
+#+KEYWORDS:    About, mzgcz, 关于
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+DESCRIPTION: About mzgcz
+
+
+联系方式：
+
+- [[mailto:j <dot> wenjiao <at> gmail <dot> com][Email]]
+- [[https://github.com/mzgcz][GitHub]]
+
+孤独啊，孤独！

@@ -1,0 +1,17 @@
+#+TITLE:       庸人立志
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-01 周六
+#+URI:         /blog/%y/%m/%d/another_flag/
+#+KEYWORDS:    Life
+#+TAGS:        Life
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 时光已逝，我仍是那个我
+
+
+毕业已11年，我在哪里，有什么收获，有哪些朋友，有谁可以说说心里话？
+
+有没有理想，有没有目标，现在是不是在那条路上？
+
+回顾和展望，慢慢逼近生命的极限。

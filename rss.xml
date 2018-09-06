@@ -4,16 +4,23 @@
     <title>Self Wiki</title>
     <link>http://mzgcz.github.io</link>
     <description>读书、编程、写作</description>
-    <pubDate>六, 01 9月 2018 15:17:29 CST</pubDate>
-    <lastBuildDate>六, 01 9月 2018 15:17:29 CST</lastBuildDate>
+    <pubDate>四, 06 9月 2018 21:47:14 CST</pubDate>
+    <lastBuildDate>四, 06 9月 2018 21:47:14 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
     <item>
       <title>庸人立志</title>
       <link>http://mzgcz.github.io/blog/2018/09/01/another_flag/</link>
       <description><![CDATA[时光已逝，我仍是那个我]]></description>
-      <pubDate>2018-09-01</pubDate>
+      <pubDate>2018-09-06</pubDate>
       <guid>http://mzgcz.github.io/blog/2018/09/01/another_flag/</guid>
+    </item>
+    <item>
+      <title>读《11次奇妙自然探索之旅》</title>
+      <link>http://mzgcz.github.io/blog/2018/09/06/read_neture_tour/</link>
+      <description><![CDATA[植物成全了自己也影响了动物，最终两者相互影响共同成全]]></description>
+      <pubDate>2018-09-06</pubDate>
+      <guid>http://mzgcz.github.io/blog/2018/09/06/read_neture_tour/</guid>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,19 @@
+#+TITLE:       智能标签
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-20 周四
+#+URI:         /wiki/smart_label/
+#+KEYWORDS:    label, library, access, ASRS
+#+TAGS:        :Label:Creater:
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+DESCRIPTION: 简便地获取想要找的东西
+
+
+儿子和我经常丢三落四，有些东西用到时翻遍屋子却找不到，真希望有个智能标签，能告诉我要找的东西在哪里！！！
+
+* 类似的产品
+** LapoCeccherelli的Filo
+   简述：宽度为6毫米的小型追踪器\\
+   技术：FRID\\
+   缺点：有源，太大\\

@@ -4,10 +4,17 @@
     <title>Self Wiki</title>
     <link>http://mzgcz.github.io</link>
     <description>读书、编程、写作</description>
-    <pubDate>四, 06 9月 2018 22:12:59 CST</pubDate>
-    <lastBuildDate>四, 06 9月 2018 22:12:59 CST</lastBuildDate>
+    <pubDate>四, 20 9月 2018 12:35:20 CST</pubDate>
+    <lastBuildDate>四, 20 9月 2018 12:35:20 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
+    <item>
+      <title>智能标签</title>
+      <link>http://mzgcz.github.io/wiki/smart_label/</link>
+      <description><![CDATA[简便地获取想要找的东西]]></description>
+      <pubDate>2018-09-20</pubDate>
+      <guid>http://mzgcz.github.io/wiki/smart_label/</guid>
+    </item>
     <item>
       <title>庸人立志</title>
       <link>http://mzgcz.github.io/blog/2018/09/01/another_flag/</link>

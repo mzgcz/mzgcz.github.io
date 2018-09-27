@@ -1,0 +1,19 @@
+#+TITLE:       手机支撑架
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-27 周四
+#+URI:         /wiki/phone_support/
+#+KEYWORDS:    phone, support
+#+TAGS:        :Phone:Support:
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+DESCRIPTION: 方便地能把手机直立或斜立的工具
+
+
+目前，经常通过手机查询一些资料，手机不能立起来真是麻烦，想要一个手机支持架
+
+* 产品特点
+** 便携
+   能轻松地房子包里，带在身边（携带时，体积要小，要轻）
+** 适用性强
+   竖屏能用，横屏也要能用，有手机壳也要能用

@@ -1,0 +1,20 @@
+#+TITLE:       手机的禅模式
+#+AUTHOR:      mzgcz
+#+EMAIL:       j.wenjiao@gmail.com
+#+DATE:        2018-09-27 周四
+#+URI:         /wiki/zen_phone/
+#+KEYWORDS:    zen, phone, manage
+#+TAGS:        :Zen:Phone:Manage:
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+DESCRIPTION: 成为手机的主人而不是奴隶
+
+
+手机作为社交和资讯的入口占据了越来越多的时间，注意力很容易被手机上的各种应用吸引而分散。
+因此，迫切需要这样一款软件：在需要集中精力时，能够屏蔽各种信息干扰（把手机放在屋子外面也是个好方法）
+
+* 类似应用
+** 系统自带的免打扰
+
+* 其他的可能
+** 通过场景来控制应用的使用和通知权限
